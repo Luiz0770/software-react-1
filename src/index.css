@@ -84,11 +84,29 @@ body {
   font-weight: 500;
   transition: .3s;
   border: 2px solid var(--cor-p3);
+  
 }
 
 .card-btn:hover {
   background: var(--cor-p4);
   border: 2px solid var(--cor-p4);
+}
+
+.titulo {
+  font-family: var(--fonte-primaria);
+  color: var(--cor-w);
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-w);
+  font-size: 1.25rem;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
 }
 
 /*************************************** HEADER ***************************************/
@@ -270,7 +288,8 @@ body {
   transition: .3s;
 }
 
-.aside nav:nth-child(2) ul li a:hover {
+.aside nav:nth-child(2) ul li a:hover,
+.aside nav:nth-child(2) ul li a.active {
   color: var(--cor-w);
 }
 
@@ -341,9 +360,9 @@ body {
   background-image: url(./assets/icons/icon-blog.svg) ;
 }
 
-/*************************************** MAIN ***************************************/
+/*************************************** MAIN HOME ***************************************/
 
-.main {
+.main-home {
   position: relative;
   top: 100px;
   display: grid;
@@ -352,6 +371,39 @@ body {
   padding: 60px 0px;
   margin-bottom: 100px;
 }
+
+/*************************************** MAIN ***************************************/
+
+.main {
+  position: relative;
+  top: 100px;
+  gap: 40px;
+  padding: 60px 0px;
+  margin-bottom: 100px;
+}
+
+/*************************************** ERROR MAIN ***************************************/
+
+.error-main {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 0px;
+  margin-bottom: 100px;
+  h1 {
+    color: var(--cor-w);
+    font-size: 3rem;
+  }
+  img {
+    width: 50%;
+  }
+}
+
+
 
 /*************************************** CARROSSEL ***************************************/
 
@@ -421,7 +473,7 @@ body {
 }
 
 .cadastro-btn a:nth-child(2):hover {
-  background: var(--cor-5);
+  background: var(--cor-4);
 }
 
 .breadcrumb {
@@ -729,7 +781,7 @@ body {
   align-items: center;
   p {
     color: var(--cor-2);
-    margin-top: 20px;
+    margin-top: 20px; 
     text-align: center;
   }
 }
@@ -835,6 +887,117 @@ body {
   margin-top: 20px;
 }
 
+/*************************************** PALPITES ***************************************/
+
+.subtitlo-palpite::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  background: url(./assets/icons/icon-pontos-b.svg);
+}
+
+.section-palpites {
+  margin-top: 60px;
+}
+
+.card-palpites {
+  background: var(--cor-7);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.card-palpites:not(:nth-child(1)) {
+  margin-top: 40px;
+}
+
+.card-palpites-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-palpites-info img {
+  width: 40px;
+}
+
+.card-palpites-info div span,
+.card-palpites-info div h2 {
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  color: var(--cor-2);
+  font-weight: 600;
+}
+
+.card-palpites-info div h2 {
+  color: var(--cor-w);
+}
+
+.lista-pilotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lista-pilotos div {
+  background: var(--cor-5);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  transition: .3s;
+}
+
+.lista-pilotos div h3 {
+  font-size: 1rem;
+  color: var(--cor-2);
+  font-weight: 400;
+  font-family: var(--fonte-primaria);
+}
+
+.lista-pilotos div p {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--fonte-primaria);
+  color: var(--cor-w);
+}
+
+.lista-pilotos a {
+  grid-column: 1 / -1;
+  background: var(--cor-4);
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonte-primaria);
+  font-weight: 600;
+  color: var(--cor-w);
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.lista-pilotos a:hover {
+  background: var(--cor-3);
+}
+
+.lista-pilotos div:hover  {
+  background: var(--cor-w);
+  cursor: pointer;
+}
+
+.lista-pilotos div:hover h3 {
+  color: var(--cor-5);
+  font-weight: 600;
+}
+
+.lista-pilotos div:hover p {
+  color: var(--cor-8);
+}
+
 /*************************************** MEDIA QUERIES ***************************************/
 
 @media (max-width: 1600px) {
@@ -897,11 +1060,17 @@ body {
   .resgate-premios-img {
     display: none;
   }
+  .error-main h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 900px) {
   .cadastro-img {
     display: none;
+  }
+  .lista-pilotos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -968,5 +1137,8 @@ body {
   }
   .link-footer {
     text-align: center;
+  }
+  .lista-pilotos {
+    grid-template-columns: 1fr;
   }
 }

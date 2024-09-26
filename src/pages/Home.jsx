@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import LogoGoogle from '../assets/icons/google.svg'
+import LogoGoogle from '../assets/icons/ggle.svg'
 import IlustrationBemVindo from '../assets/ilustrations/bem-vindo.svg'
 import IlustrationGanhePontos from '../assets/ilustrations/ganhe-pontos.svg'
 import IlustrationResgatePremios from '../assets/ilustrations/resgate-premios.svg'
@@ -11,10 +11,10 @@ import ImgFuncionamento from '../assets/img-funcionamento.jpg'
 
 function Home() {
   return (
-    <main class="main container">
+    <main class="main-home container">
       {/* ------------------------------------ CARD CARROSSEL ------------------------------------ */}
       <section class="carrosel">
-        <button id="prev-img">=</button>
+        <button id="prev-img">⭠</button>
         <div class="container-carrosel">
             <ul class="container-cards" id="images">
               <li class="cadastro bg-card item-carrossel">
@@ -57,7 +57,7 @@ function Home() {
               </li>
             </ul>
         </div>
-        <button id="next-img">=</button>
+        <button id="next-img">⭢</button>
       </section>
       {/* ------------------------------------ CARD PROXIMA CORRIDA ------------------------------------ */}
       <section class="proximo-circuito">
