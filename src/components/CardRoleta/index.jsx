@@ -11,8 +11,8 @@ function CardRoleta() {
                 <div className="giro-gratis-conteudo">
                     <h2>Venha coletar seu giro grátis</h2>
                     <div>
-                        <Link to='/roleta-semanal' className="card-btn">Roleta semanal</Link>
-                        <Link to='/roleta-diaria'>Roleta diária</Link>
+                        <Link to='/roleta' className="card-btn">Roleta semanal</Link>
+                        <Link to='/roleta'>Roleta diária</Link>
                     </div>
                 </div>
                 <img src={IlustrationGiro2} alt="Pessoa em pé mexendo no celular" />

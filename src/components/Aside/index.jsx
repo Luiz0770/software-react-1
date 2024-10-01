@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Aside() {
   return(
     <aside className="aside" id="aside">
-      <a className="link-obter" href="./index.html">Ganhe 20</a>
+      <Link className="link-obter" to={"/"}>Ganhe 20</Link>
       <nav>
         <p><button aria-controls="populares" aria-expanded="true">Populares</button></p>
         <ul id="populares" className="ativa">
