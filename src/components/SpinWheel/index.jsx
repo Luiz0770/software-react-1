@@ -15,7 +15,7 @@ function SpinWheel() {
         setRotacao(novaRotacao);
 
         setTimeout(() => {
-            alert(`Parabéns, você ganhou: ${opcaoSelecionada}`);
+            console.log(`Parabéns, você ganhou: ${opcaoSelecionada}`);
         }, 3000); 
     }
 
