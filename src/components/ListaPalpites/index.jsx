@@ -118,8 +118,8 @@ function ListaPalpites() {
   return (
     <section className="section-palpites">
       <div>
-        {palpites.map(palpite => <CardPalpites
-          key={palpite.nomeCorrida}
+        {palpites.map((palpite, idx) => <CardPalpites
+          key={idx}
           data={palpite.data}
           nomeCorrida={palpite.nomeCorrida}
           pilotos={palpite.pilotos}

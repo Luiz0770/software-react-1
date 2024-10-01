@@ -1,6 +1,6 @@
 function Suporte() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Suporte</h1>
     </main>
   )

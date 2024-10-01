@@ -1,6 +1,6 @@
 function Fantasy() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Fantasy</h1>
     </main>
   )

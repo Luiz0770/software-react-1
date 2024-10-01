@@ -1,6 +1,6 @@
 function Circuitos() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Circuitos</h1>
     </main>
   )

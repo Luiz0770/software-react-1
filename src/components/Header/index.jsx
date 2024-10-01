@@ -5,18 +5,18 @@ import IconMenu from "../../assets/icons/menu.svg"
 
 function Header() {
   return (
-    <header class="header">
-      <div class="header-logo-menu">
-        <img id="menu" class="menu" src={IconMenu} alt="menu hamburguer" onclick="clickMenu()"/>
+    <header className="header">
+      <div className="header-logo-menu">
+        <img id="menu" className="menu" src={IconMenu} alt="menu hamburguer"/>
         <NavLink to="/"><img src={Logo} alt="FE Choices"/></NavLink>
       </div>
-      <div class="header-nav">
-        <div class="header-pages">
+      <div className="header-nav">
+        <div className="header-pages">
           <NavLink to='/palpites'>Palpites</NavLink>
           <NavLink to='/fantasy'>Fantasy</NavLink>
           <NavLink to='/roleta'>Roleta</NavLink>
         </div>
-        <div class="header-login">
+        <div className="header-login">
           <NavLink to='/login'>Entrar</NavLink>
           <NavLink to='/cadastro'>Cadastre-se</NavLink>
         </div>

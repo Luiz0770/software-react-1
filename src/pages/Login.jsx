@@ -1,20 +1,20 @@
 function Login() {
   return (
-    <main class="main container">
-      <section class="section-login card-login-cadastro">
-        <form id="loginForm" class="card-login-cadastro-conteudo">
+    <main className="main container">
+      <section className="section-login card-login-cadastro">
+        <form id="loginForm" className="card-login-cadastro-conteudo">
           <h2>Login</h2>
           <div>
-            <label for="usuario">Nome de Usuário</label>
+            <label htmlFor="usuario">Nome de Usuário</label>
             <input type="text" name="usuario" id="usuario" placeholder="Seu nome"/>
           </div>
           <div>
-            <label for="senha">Senha</label>
+            <label htmlFor="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="*******"/>
           </div>
           <p id="dica"></p>
-          <p class="link-cadastro">Não tem cadastro? <a href="./cadastro">Clique aqui</a></p>
-          <button onclick="validarLogin()" class="btn-login-cadastro">Entrar</button>
+          <p className="link-cadastro">Não tem cadastro? <a href="./cadastro">Clique aqui</a></p>
+          <button className="btn-login-cadastro">Entrar</button>
         </form>
       </section>
     </main>

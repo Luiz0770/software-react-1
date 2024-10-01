@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom';
 
 function Aside() {
   return(
-    <aside class="aside" id="aside">
-      <a class="link-obter" href="./index.html">Ganhe 20</a>
+    <aside className="aside" id="aside">
+      <a className="link-obter" href="./index.html">Ganhe 20</a>
       <nav>
-        <p><button onclick="eventoPopulares()" aria-controls="populares" aria-expanded="true">Populares</button></p>
-        <ul id="populares" class="ativa">
+        <p><button aria-controls="populares" aria-expanded="true">Populares</button></p>
+        <ul id="populares" className="ativa">
           <li><NavLink to='/palpites'>Palpites</NavLink></li>
           <li><NavLink to='/roleta'>Roleta</NavLink></li>
           <li><NavLink to='/fantasy'>Fantasy</NavLink></li>

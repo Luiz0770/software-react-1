@@ -1,6 +1,6 @@
 function Premios() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Prêmios</h1>
     </main>
   )

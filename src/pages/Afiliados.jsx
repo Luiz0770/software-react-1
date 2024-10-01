@@ -1,6 +1,6 @@
 function Afiliados() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Afiliados</h1>
     </main>
   )

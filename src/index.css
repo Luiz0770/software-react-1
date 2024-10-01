@@ -998,6 +998,82 @@ body {
   color: var(--cor-8);
 }
 
+/*************************************** ROLETA ***************************************/
+
+.roleta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	min-height: 90vh;
+}
+
+.spin-wheel {
+	height: 600px; /* Tamanho padrão para telas grandes */
+	width: 600px; /* Tamanho padrão para telas grandes */
+	background: #22374D;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: 3s all;
+	border: 5px solid #081122;
+}
+
+.spin-wheel div {
+	height: 50%;
+	width: 300px; /* Tamanho padrão para telas grandes */
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	position: absolute;
+	left: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: monospace;
+	font-weight: 1000;
+	color: #fff;
+	writing-mode: vertical-rl;
+}
+
+.spin-wheel div::after {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-top: 8px;
+	background: url(../../assets/icons/icon-pontos-b.svg);
+}
+
+.spin {
+	height: 70px; /* Tamanho fixo */
+	width: 240px; /* Tamanho fixo */
+	background: #22374D;
+	position: absolute;
+	margin-top: 750px; /* Ajuste para permitir espaço */
+	font-size: 1em; /* Tamanho fixo */
+	color: #fff;
+	font-weight: 1000;
+	cursor: pointer;
+	transition: 0.2s all;
+	border: none;
+}
+
+.spin:hover {
+	box-shadow: none;
+}
+
+.stoper {
+	height: 50px; /* Tamanho fixo */
+	width: 40px; /* Tamanho fixo */
+	background: #C4CED9;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	margin-top: -600px; /* Ajuste para permitir espaço */
+}
+
+
+
 /*************************************** MEDIA QUERIES ***************************************/
 
 @media (max-width: 1600px) {
@@ -1141,4 +1217,62 @@ body {
   .lista-pilotos {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* Media Queries para telas menores */
+@media (max-width: 1001px) {
+	.spin-wheel {
+		height: 400px; /* Ajuste para ser responsivo */
+		width: 400px; /* Ajuste para ser responsivo */
+	}
+	
+	.spin-wheel div {
+		width: 200px; /* Ajuste para ser responsivo */
+	}
+
+	.mid {
+		height: 50px;
+		width: 50px; 
+		background-size: 30px;
+	}
+
+	.spin {
+		width: 80%; /* Ajuste para ser responsivo */
+		margin-top: 80vh; /* Ajuste para ser responsivo */
+	}
+
+	.stoper {
+		margin-top: -400px; /* Ajuste para ser responsivo */
+	}
+}
+
+@media (max-width: 480px) {
+	.spin-wheel {
+		height: 300px; /* Ajuste para ser responsivo */
+		width: 300px; /* Ajuste para ser responsivo */
+	}
+	
+	.spin-wheel div {
+		width: 150px; /* Ajuste para ser responsivo */
+	}
+
+	.spin-wheel div::after{
+		display: none;
+	}
+
+	.mid {
+		height: 40px;
+		width: 40px; 
+		background-size: 25px;
+	}
+
+	.spin {
+		width: 80%; /* Ajuste para ser responsivo */
+		margin-top: 80vh; /* Ajuste para ser responsivo */
+	}
+
+	.stoper {
+		margin-top: -300px; /* Ajuste para ser responsivo */
+	}
 }

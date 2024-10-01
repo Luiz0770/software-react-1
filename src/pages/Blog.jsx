@@ -1,6 +1,6 @@
 function Blog() {
   return (
-    <main class="main container">
+    <main className="main container">
       <h1>Blog</h1>
     </main>
   )
